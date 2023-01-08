@@ -1,7 +1,7 @@
 #include <math.h>
 #include <stdio.h>
 
-int square(int x)
+int squ(int x)
 {
   int s;
   double q;
@@ -10,24 +10,24 @@ int square(int x)
   return s;
 }
 
-int sqrt_count(int x, int y, int z)
+int squ_count(int x, int y, int z)
 {
   int count = 0;
   int temp;
-  temp = square(x);
+  temp = squ(x);
   if (temp == x)
   {
     count++;
   }
 
-  temp = square(y);
+  temp = squ(y);
 
   if (temp == y)
   {
     count++;
   }
 
-  temp = square(z);
+  temp = squ(z);
 
   if (temp == z)
   {
@@ -37,14 +37,14 @@ int sqrt_count(int x, int y, int z)
   return count;
 }
 
-void sqrt_count(int x, int y, int z, int *c) 
+void squ_count(int x, int y, int z, int *c) 
 { 
-*c = sqrt_count(x, y, z); 
+*c = squ_count(x, y, z); 
 }
 
-void sqrt_count(int x, int y, int z, int &c)
+void squ_count(int x, int y, int z, int &c)
 { 
-c = sqrt_count(x, y, z);
+c = squ_count(x, y, z);
 }
 
 int main()
@@ -54,11 +54,11 @@ int main()
   int z = 144;
   int c = 0;
   
-  printf("%i\n", sqrt_count(x, y, z));
-  sqrt_count(x, y, z, &c);
+  printf("%i\n", squ_count(x, y, z));
+  squ_count(x, y, z, &c);
 
   printf("%i\n", c);
-  sqrt_count(x, y, z, c);
+  squ_count(x, y, z, c);
   
   printf("%i\n", c);
   
